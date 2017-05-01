@@ -1,5 +1,7 @@
 # GitBook 中国加速计划
 
+[![Build Status](https://travis-ci.org/sqrthree/GitBook-CDN-plan.svg?branch=master)](https://travis-ci.org/sqrthree/GitBook-CDN-plan)
+
 > 由于某些原因，[GitBook](http://gitbook.com/) 的服务在国内访问一直断断续续、若即若离，体验十分之差，而对于一个面向文档编程的开发者来说，这是无法容忍的。因此就有了这么个计划。
 
 简单的来说，就是将 [GitBook](http://gitbook.com/) 生成的静态内容托管至 [七牛云](https://www.qiniu.com/) 平台，借助于 [七牛云](https://www.qiniu.com/) 优秀的 CDN 服务来加速国内访问速度。
