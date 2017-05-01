@@ -4,9 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "check": "node libs/check.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["GitBook CDN"],
   "author": "sqrtthree <imsqrtthree@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
