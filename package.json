@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "schedule": "node schedule.js",
     "check": "node libs/check.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

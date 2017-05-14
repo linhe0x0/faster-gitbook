@@ -2,7 +2,6 @@ const async = require('async')
 const deploy = require('./libs/deploy')
 const utils = require('./libs/utils')
 const md5Cache = require('./libs/md5Cache')
-const schedule = require('node-schedule')
 
 const job = function job() {
   utils.getTasks((err, tasks) => {
@@ -23,6 +22,8 @@ const job = function job() {
   })
 }
 
-job()
+if (require.main === module) {
+  job()
+}
 
-schedule.scheduleJob('0 0 0 * * *', job)
+module.exports = job

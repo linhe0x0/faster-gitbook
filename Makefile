@@ -4,4 +4,7 @@ check:
 start:
 	@node app.js
 
-.PHONY: check start
+schedule:
+	@node schedule.js
+
+.PHONY: check start schedule
