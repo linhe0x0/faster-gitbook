@@ -16,3 +16,8 @@ install:
 script:
   - make check
 
+deploy:
+  provider: script
+  script: make deploy
+  on:
+    branch: master

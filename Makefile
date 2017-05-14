@@ -7,4 +7,10 @@ start:
 schedule:
 	@node ./node_modules/.bin/pm2 start schedule.js --name "GitBook-CDN-plan"
 
-.PHONY: check start schedule
+deploy:
+	@git config user.username 'travis'
+	@git config user.email 'travis.org@fetalk.xyz'
+	@git remote add fetalk git@fetalk.xyz:GitBook-CDN-plan
+	@git push fetalk master
+
+.PHONY: check start schedule deploy
