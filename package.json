@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "dev": "NODE_ENV=development node app.js",
     "schedule": "pm2 start schedule.js --name 'GitBook-CDN-plan'",
     "check": "node libs/check.js",
     "generate": "node generator.js",
@@ -18,6 +19,7 @@
   "dependencies": {
     "async": "^2.3.0",
     "chalk": "^1.1.3",
+    "log4js": "^1.1.1",
     "node-schedule": "^1.2.1",
     "pm2": "^2.4.6",
     "qiniu": "^6.1.13"

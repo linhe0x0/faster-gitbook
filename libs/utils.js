@@ -3,7 +3,6 @@ const path = require('path')
 const exec = require('child_process').exec
 
 const bookDir = path.resolve(__dirname, '../books')
-const repoDir = path.resolve(__dirname, '../repos')
 
 exports.getTasks = function getTasks(callback) {
   fs.readdir(bookDir, callback)
@@ -19,9 +18,7 @@ exports.getFileName = function getFileName(file) {
   return path.parse(file).name
 }
 
-exports.exists = function isExists(dirname, callback) {
-  const dir = path.join(repoDir, dirname)
-
+exports.exists = function isExists(dir, callback) {
   fs.access(dir, (err) => {
     if (err) return callback(false)
 
@@ -82,13 +79,13 @@ exports.findAlllFiles = function findAlllFiles(dirname, callback) {
             cb && cb()
           }
         }
-      })(0) 
+      })(0)
     })
   })(dirname)
 }
 
 exports.timeHumanize = function timeHumanize(timestamp) {
-  const minutes = parseInt((timestamp / 1000 / 60), 10) 
+  const minutes = parseInt((timestamp / 1000 / 60), 10)
   const seconds = parseInt((timestamp / 1000 % 60), 10)
 
   return minutes ? `${minutes} mins ${seconds} seconds.` : `${seconds} seconds`

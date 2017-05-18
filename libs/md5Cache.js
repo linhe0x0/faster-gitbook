@@ -18,7 +18,7 @@ exports.computed = function computed(filePath, callback) {
 
 exports.get = function get(filename, callback) {
   const file = path.join(dir, filename) + '.json'
-  
+
   fs.readFile(`${file}`, 'utf8', (err, content) => {
     if (err) return callback(err)
 
@@ -35,41 +35,39 @@ exports.get = function get(filename, callback) {
 exports.set = function set(filename, hash) {
   const file = path.join(dir, filename) + '.json'
 
-  let bak = {}
-
   const read = function readFile(cb) {
     return fs.readFile(file, 'utf8', (err, data) => {
       if (err) return cb(err)
 
       try {
-        bak = JSON.parse(data)
+        return cb(null, JSON.parse(data))
       } catch(err) {
         return cb(err)
       }
     })
   }
 
-  const write = function writeFile() {
+  const write = function writeFile(data) {
     Object.keys(hash).forEach((item) => {
-      bak[item] = hash[item]
+      data[item] = hash[item]
     })
 
-    const str = JSON.stringify(bak, null, 4)
+    const str = JSON.stringify(data, null, 4)
 
     return fs.writeFile(file, str, () => {})
   }
 
-  utils.exists(`${file}.json`, (result) => {
+  utils.exists(file, (result) => {
     if (!result) {
-      return write()
+      return write({})
     }
 
-    read((err) => {
+    read((err, data) => {
       if (err) return
 
-      write()
+      write(data)
     })
-  }) 
+  })
 }
 
 exports.clean = function clean(filename, callback) {
