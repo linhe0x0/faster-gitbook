@@ -21,6 +21,7 @@
       "title": "Book 描述",
       "repo": "GitHub repo 地址，格式为：user/repo",
       "branch": "分支名",
+      "docs_dirname": "文档目录，默认为 repo 根目录",
       "original_url": "原 GitBook 的链接"
     }
     ```
