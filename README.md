@@ -32,6 +32,7 @@
 <!--list-start-->
 - [reactjs/redux](http://op6gls4d1.bkt.clouddn.com/reactjs-redux/) - Redux 官方英文文档
 - [sqrthree/codewars](http://op6gls4d1.bkt.clouddn.com/sqrthree-codewars/) - 我的代码战争
+- [vuejs/vuex](http://op6gls4d1.bkt.clouddn.com/vuejs-vuex/) - vuex 官方文档
 <!--list-end-->
 
 ## 致谢
