@@ -21,15 +21,17 @@
       "title": "Book 描述",
       "repo": "GitHub repo 地址，格式为：user/repo",
       "branch": "分支名",
-      "orignal_url": "原 GitBook 的链接"
+      "original_url": "原 GitBook 的链接"
     }
     ```
 3. 如有疑问，请参考 [github.com/sqrthree/GitBook-CDN-plan/blob/master/books/sqrthree-codewars.json](https://github.com/sqrthree/GitBook-CDN-plan/blob/master/books/sqrthree-codewars.json)
 
 ## 目前已有文档列表
 
-- [sqrthree-codewars](http://op6gls4d1.bkt.clouddn.com/sqrthree-codewars/) - 示例项目。
-- [reactjs-redux](http://op6gls4d1.bkt.clouddn.com/reactjs-redux/) - Redux 官方英文文档。
+<!--list-start-->
+- [reactjs/redux](http://op6gls4d1.bkt.clouddn.com/reactjs-redux/) - Redux 官方英文文档
+- [sqrthree/codewars](http://op6gls4d1.bkt.clouddn.com/sqrthree-codewars/) - 我的代码战争
+<!--list-end-->
 
 ## 致谢
 

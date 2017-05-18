@@ -13,4 +13,7 @@ deploy:
 	@git remote add fetalk git@fetalk.xyz:GitBook-CDN-plan
 	@git push fetalk master
 
-.PHONY: check start schedule deploy
+generate:
+	@node generator.js
+
+.PHONY: check start schedule deploy generate

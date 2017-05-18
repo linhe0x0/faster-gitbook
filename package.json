@@ -7,6 +7,7 @@
     "start": "node app.js",
     "schedule": "pm2 start schedule.js --name 'GitBook-CDN-plan'",
     "check": "node libs/check.js",
+    "generate": "node generator.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
