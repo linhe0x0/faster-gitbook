@@ -10,6 +10,14 @@
 
 如果你想要添加一个 [GitBook](http://gitbook.com/) 文档至该计划，欢迎提交 PR。
 
+## 目前已有文档列表
+
+<!--list-start-->
+- [reactjs/redux](http://op6gls4d1.bkt.clouddn.com/reactjs-redux/) - Redux 官方英文文档
+- [sqrthree/codewars](http://op6gls4d1.bkt.clouddn.com/sqrthree-codewars/) - 我的代码战争
+- [vuejs/vuex](http://op6gls4d1.bkt.clouddn.com/vuejs-vuex/docs) - vuex 官方文档
+<!--list-end-->
+
 ## 新加一个任务
 
 1. 请在添加之前请先确认是否已经存在相关任务。
@@ -26,14 +34,6 @@
     }
     ```
 3. 如有疑问，请参考 [github.com/sqrthree/GitBook-CDN-plan/blob/master/books/sqrthree-codewars.json](https://github.com/sqrthree/GitBook-CDN-plan/blob/master/books/sqrthree-codewars.json)
-
-## 目前已有文档列表
-
-<!--list-start-->
-- [reactjs/redux](http://op6gls4d1.bkt.clouddn.com/reactjs-redux/) - Redux 官方英文文档
-- [sqrthree/codewars](http://op6gls4d1.bkt.clouddn.com/sqrthree-codewars/) - 我的代码战争
-- [vuejs/vuex](http://op6gls4d1.bkt.clouddn.com/vuejs-vuex/docs) - vuex 官方文档
-<!--list-end-->
 
 ## 致谢
 
