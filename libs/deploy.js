@@ -1,3 +1,4 @@
+const path = require('path')
 const async = require('async')
 const utils = require('./utils')
 const md5Cache = require('./md5Cache')
@@ -22,11 +23,12 @@ const deploy = function deploy(taskConfigurationFile, callback) {
   // 2. get document file with config.repo.
   const fetchFiles = function fetchFiles(config, callback) {
     config.branch = config.branch || 'master'
+    config.docs_dirname = config.docs_dirname || ''
 
     const cb = function cb(err) {
       if (err) return callback(err)
 
-      return callback(null, `repos/${taskName}`)
+      return callback(null, `repos/${taskName}/${config.docs_dirname}`)
     }
 
     utils.exists(taskName, (exists) => {
@@ -53,14 +55,14 @@ const deploy = function deploy(taskConfigurationFile, callback) {
     async.series([ getHeadHash, getCacheHash ], (err, results) => {
       if (err && err.code === 'ENOENT') {
         md5Cache.set(taskName, { HEAD: results[0] })
-        return callback(null, `repos/${taskName}`)
+        return callback(null, dir)
       }
 
       if (err) return callback(err)
 
       if (results[0] === results[1].HEAD) return callback('This document is up to date.')
 
-      return callback(null, `repos/${taskName}`)
+      return callback(null, dir)
     })
   }
 
@@ -72,7 +74,7 @@ const deploy = function deploy(taskConfigurationFile, callback) {
       utils.exec('gitbook build', { cwd: dir }, (err) => {
         if (err) return callback(err)
 
-        return callback(null, `${dir}/_book`)
+        return callback(null, path.join(dir, '_book'))
       })
     })
   }
@@ -111,6 +113,7 @@ const deploy = function deploy(taskConfigurationFile, callback) {
         })
 
         md5Cache.set(taskName, cache)
+
         return callback(null, result)
       })
     })
