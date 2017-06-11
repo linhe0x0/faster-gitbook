@@ -27,7 +27,8 @@ const getTasks = function getTasks(callback) {
 
 const generator = function generator(tasks) {
   return tasks.map((item) => {
-    docsDirname = item.docs_dirname || ''
+    docsDirname = item.docs_dirname ? `${item.docs_dirname}/` : ''
+
     return `- [${item.repo}](http://${config.host}/${item.name}/${docsDirname}) - ${item.title}`
   })
 }
