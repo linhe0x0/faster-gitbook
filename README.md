@@ -1,5 +1,6 @@
 # GitBook 中国加速计划
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sqrthree/GitBook-CDN-plan.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/sqrthree/GitBook-CDN-plan.svg?branch=master)](https://travis-ci.org/sqrthree/GitBook-CDN-plan)
 
 > 由于某些原因，[GitBook](http://gitbook.com/) 的服务在国内访问一直断断续续、若即若离，体验十分之差，而对于一个面向文档编程的开发者来说，这是无法容忍的。因此就有了这么个计划。
