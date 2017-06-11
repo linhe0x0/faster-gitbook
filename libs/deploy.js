@@ -150,6 +150,11 @@ const deploy = function deploy(taskConfigurationFile, callback) {
     logger.debug('Modified %d, Added %s.', difference.modified.length, difference.added.length)
     logger.debug('Uploading documents.')
 
+    if (config.debug) {
+      logger.debug('Skip upload task because of debug mode.')
+      return callback(null)
+    }
+
     async.parallel([ update, up ], (err) => {
       if (err) return callback(err)
 
